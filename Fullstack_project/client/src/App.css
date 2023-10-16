@@ -1,0 +1,80 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+  margin-left: 500px;
+  margin-top: 500px;
+}
+.loader::before , .loader::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width: 48em;
+  height: 48em;
+  background-image:
+    radial-gradient(circle 10px, #246af6 100%, transparent 0),
+    radial-gradient(circle 10px, #65fc1f 100%, transparent 0),
+    radial-gradient(circle 10px, #f13998 100%, transparent 0),
+    radial-gradient(circle 10px, #f6d118 100%, transparent 0),
+    radial-gradient(circle 10px, #fd1f1f 100%, transparent 0),
+    radial-gradient(circle 10px, #41fd0d 100%, transparent 0),
+    radial-gradient(circle 10px, #bb42f3 100%, transparent 0),
+    radial-gradient(circle 10px, #0bb9ef 100%, transparent 0);
+  background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em,
+                       13em -13em, -13em -13em, 13em 13em, -13em 13em;
+    background-repeat: no-repeat;
+  font-size: 0.5px;
+  border-radius: 50%;
+  animation: blast 1s ease-in infinite;
+}
+.loader::after {
+  font-size: 1px;
+  background: #ff18ba;
+  animation: bounce 1s ease-in infinite;
+}
+
+@keyframes bounce {
+  0% , 100%{ font-size: 0.75px }
+  50% { font-size: 1.5px }
+}
+@keyframes blast {
+  0% , 40% {
+    font-size: 0.5px;
+  }
+  70% {
+    opacity: 1;
+    font-size: 4px;
+  }
+   100% {
+     font-size: 6px;
+    opacity: 0;
+  }
+}
+
+
+#pic{
+  height: 500px;
+}
+#banner02{
+ font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 420px){
+  #pic{
+    height: 100px;
+    width: 400px;
+    
+  }
+   #banner02{
+ 
+    font-size: 0.8rem;
+    color: black;
+   }
+}
+
+
+
+  
